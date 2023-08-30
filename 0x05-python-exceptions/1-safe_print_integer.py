@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""
-Function that checks for integer and prints it
-"""
+
 def safe_print_integer(value):
+    """
+    Function that checks for integer and prints it
+    """
     try:
         print("{:d}".format(value))
         return True
