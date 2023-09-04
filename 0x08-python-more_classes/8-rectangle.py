@@ -10,18 +10,18 @@ class Rectangle:
     """
     number_of_instances = 0
     print_symbol = "#"
-    
+
     def __init__(self, width=0, height=0):
         self.__width = width
         self.__height = height
         Rectangle.number_of_instances += 1
-        
+
     @property
     def width(self):
         return self.__width
-        
+
     @width.setter
-    def width (self, value):
+    def width(self, value):
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -31,7 +31,7 @@ class Rectangle:
     @property
     def height(self):
         return self.__height
-        
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -54,7 +54,7 @@ class Rectangle:
         else:
             rectangle_str = ""
             for _ in range(self.__height):
-                rectangle_str += str(Rectangle.print_symbol) * self.__width + "\n"
+                rectangle_str += Rectangle.print_symbol * self.__width + "\n"
             return rectangle_str[:-1]
 
     def __repr__(self):
@@ -70,12 +70,11 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        
+
         area_1 = rect_1.area()
         area_2 = rect_2.area()
-        
+
         if area_1 >= area_2:
             return rect_1
         else:
             return rect_2
-    
