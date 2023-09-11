@@ -2,7 +2,6 @@
 '''adds functionality to the geometry class'''
 
 
-
 class BaseGeometry:
     '''Geometry class'''
     def area(self):
