@@ -5,5 +5,6 @@
 def read_file(filename=""):
     """reads and print text file"""
     with open(filename) as a_file:
+        a_file.read()
         print(a_file)
         
