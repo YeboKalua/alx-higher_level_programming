@@ -12,7 +12,7 @@ function sort (arr) {
   }
   return arr;
 }
-const array = process.argv.slice(2);
+const array = process.argv.slice(2).map(Number);
 const newArray = sort(array);
 const num = newArray.length;
 if (num < 2) {
