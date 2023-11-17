@@ -5,7 +5,9 @@ class Rectangle {
       this.width = w;
       this.height = h;
     } else {
-      return {};
+      const empty = {};
+      Object.setPrototypeOf(empty, Rectangle.prototype);
+      return empty;
     }
   }
 }
