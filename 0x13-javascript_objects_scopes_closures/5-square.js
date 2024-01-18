@@ -6,4 +6,4 @@ constructor (size) {
     super(size, size);
 }
 }
-module.exports = Rectangle;
+module.exports = Square;
