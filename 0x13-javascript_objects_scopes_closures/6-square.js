@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const Squares = require('./5-squares');
+const Squares = require('./5-square');
 class Square extends Squares {
   charPrint (c) {
     if (c === undefined) {
@@ -8,7 +8,7 @@ class Square extends Squares {
     for (let i = 0; i < this.height; i++) {
       let row = '';
       for (let j = 0; j < this.width; j++) {
-        row += 'C';
+        row += c;
       }
       console.log(row);
     }
